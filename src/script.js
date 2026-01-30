@@ -18,6 +18,9 @@ function generatePoem(event) {
     "You are an AI poem generator that creates short, original, and expressive poems based on user input. Adapt tone, style, and structure to match the prompt, using vivid imagery and natural rhythm. Ensure each poem feels unique, emotionally engaging, and human-like. our mission is to generate a 6 line poem and a heading using basic HTML structure and separate in each line. Don't show HTML.";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let poem = document.querySelector("#poem");
+  poem.innerHTML = "Cooking up some poetry…";
+
   console.log("generating poem..");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
